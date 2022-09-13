@@ -3,7 +3,7 @@ import React from 'react';
 function Nav() {
 
   return (
-<header>
+<header className='App-header'>
   <h2>
     <a href="/">
       <span role="img" aria-label="camera"> 📸</span> Oh Snap!

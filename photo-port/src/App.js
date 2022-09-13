@@ -3,6 +3,7 @@ import Nav from './components/Nav';
 import About from './components/About';
 
 function App() {
+  //This is JSX code:
   return (
     <div>
       <Nav></Nav>
