@@ -22,26 +22,32 @@ describe('Nav component', () => {
       />);
     })
     //snapshot test
-it('matches snapshot', () => {
-    const { asFragment } = render( <Nav /> );
+   
     //assert value comparison
-expect(asFragment()).toMatchSnapshot();
-});
-})
+  
+
 
 describe('emoji is visible', () => {
-    it('inserts emoji into the h2', () => {
-    // Arrange
-    const { getByLabelText } = render(<Nav />);
+  it('renders', () => {
+    render(<Nav
+      categories={categories}
+      setCurrentCategory={mockSetCurrentCategory}
+      currentCategory={mockCurrentCategory}
+    />);
+  })
     // Assert
     expect(getByLabelText('camera')).toHaveTextContent('📸');
     })
-  })
+ 
 
   describe('lins are visible', () => {
-    it('inserts text into the links', () => {
-        //Arrange
-    const { getByTestId } = render(<Nav />);
+    it('renders', () => {
+      render(<Nav
+        categories={categories}
+        setCurrentCategory={mockSetCurrentCategory}
+        currentCategory={mockCurrentCategory}
+      />);
+    })
 
         //Assert
     expect(getByTestId('link')).toHaveTextContent('Oh Snap!');
